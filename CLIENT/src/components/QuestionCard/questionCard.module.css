@@ -1,0 +1,116 @@
+.question_holder{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ccc; /* Only bottom border */
+  margin-bottom: 0; /* Remove space between cards */
+  transition: background-color 0.3s;
+  
+
+}
+
+.question_holder p{
+    color: black;
+
+}
+ 
+ .question_holder:hover {
+   
+    transition: all ease-in-out .5s;
+    transform: scale(1.01);
+   
+  }
+
+
+.requester_holder{
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    font-weight: 500;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.requester_question_holder{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.title_description_holder{
+    display: flex;
+    /* gap: 5px; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.title_description_holder p{
+    margin: 0;
+    padding: 5px;
+}
+
+.question_title{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.question_description{
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 2px 0;
+    color: black;
+}
+.question_arrow_holder{
+    margin-right: 15px;
+}
+
+.question_date {
+    font-size: 14px;
+    text-align: right;
+    color: #555 !important;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 12px; /* Adds spacing between the buttons */
+  }
+  
+  .editButton,
+  .deleteButton {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .editButton {
+    background-color: #4caf50; /* Green color */
+    color: white;
+  }
+  
+  .editButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .deleteButton {
+    background-color: #f44336; /* Red color */
+    color: white;
+  }
+  
+  .deleteButton:hover {
+    background-color: #e53935; /* Darker red on hover */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  

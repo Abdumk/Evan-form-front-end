@@ -1,0 +1,119 @@
+.allContainer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url("../../../assets/Images/howitworkbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .question__container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    /* padding: 10px; */
+  
+  }
+  
+  .question__header__title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .questionContainer {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .questionListUl ul li {
+    list-style-type: disc;
+    margin: 0 auto; /* Space between the items */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .questionTitle {
+    font-size: 1.6rem;
+    /* margin-bottom: 15px; */
+    color: #333;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* .questionList ul li{
+    list-style-type: disc;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 0 !important;
+   
+  } */
+
+  
+  .questionItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .questionItem:last-child {
+    border-bottom: none;
+  }
+  
+  .icon {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: var(--blue-main);
+  }
+  
+  .highlight {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--blue-main);
+    font-weight: bold;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .question__button, .question__btn {
+    background-color: var(--blue-shade);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .question__btn {
+    background-color: #ccc;
+  }
+  
+  .question__button:hover, .question__btn:hover {
+    background-color: var(--blue-main);
+  }
+  
+  .question__form input, .question__form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  
+  }
+  .question__description:focus{
+    outline: none;
+    border: 1.5px solid var(--primary-color) !important;
+  
+  }
+  
