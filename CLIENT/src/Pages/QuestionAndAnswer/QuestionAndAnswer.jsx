@@ -20,6 +20,7 @@ function QuestionAndAnswer() {
   const [editingAnswerId, setEditingAnswerId] = useState(null);
   const [editingAnswerText, setEditingAnswerText] = useState("");
   const answerInput = useRef();
+  const [reload, setReload] = useState(false);
 
   // Fetch the question details
   useEffect(() => {
@@ -27,7 +28,7 @@ function QuestionAndAnswer() {
       setQuestionDetails(res.data);
       setLoading(false);
     });
-  }, [questionId]);
+  }, [questionId,reload]);
 
   // Post a new answer
   async function handlePostAnswer(e) {
@@ -39,8 +40,15 @@ function QuestionAndAnswer() {
         questionid: questionId,
       });
       if (response.status === 201) {
-        Swal.fire("Success!", "Answer submitted successfully!", "success").then(() => {
-          window.location.reload();
+        Swal.fire({
+          title: "Success!",
+          text: "Answer submitted successfully!",
+          icon: "success",
+          confirmButtonText: "OK",
+        }).then(() => {
+          setReload((prev) => !prev);
+          answerInput.current.value = "";
+         // window.location.reload();
         });
       }
     } catch {

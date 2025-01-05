@@ -107,6 +107,7 @@ function Signup({ onSwitch }) {
             // Redirect to home page
            // window.location.href = "/";
            navigate("/", { replace: true });
+           window.location.reload();
           } else {
             setError(
               loginResponse.data.msg || "Login failed. Please try again."
