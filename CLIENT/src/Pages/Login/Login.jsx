@@ -41,7 +41,7 @@ function Login({ onSwitch }) {
       );
       // console.log(response.data)
       localStorage.setItem("EV-Forum-token-Jun2024", response.data.token); // Store the token in local storage Jun
-     // window.location.href = "/"; // This will navigate to the / page and refresh the application
+     // window.location.href = "/";
       if (response.status === 200) {
         setSuccess("Login successful! Redirecting..."); 
         await Swal.fire({
