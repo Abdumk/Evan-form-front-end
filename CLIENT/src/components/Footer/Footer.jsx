@@ -37,16 +37,16 @@ function Footer() {
         <ul className={classes.footer_ul}>
           <li className={classes.term}>
             
-          <div
+          <Link
+              to="/howitworks"
               style={{
                 textDecoration: "none",
                 color: "#959CA4",
                 paddingLeft: "0",
-              }} >
-           
-            How it works
-
-            </div>
+              }}
+            >
+              How it works
+            </Link>
             
           </li>
           <li className={classes.term}>

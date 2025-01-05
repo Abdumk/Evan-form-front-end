@@ -46,12 +46,13 @@ function Header() {
                 ) : null
               }
 
-              <div
-              
+<Nav.Link
+                as={Link}
+                to="/howitworks"
                 className={classes.navigation_links}
               >
                 How it Works
-              </div>
+              </Nav.Link>
            {
              userId ? (
                <Button
