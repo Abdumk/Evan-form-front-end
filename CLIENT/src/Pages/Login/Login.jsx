@@ -3,10 +3,12 @@ import {axiosInstance} from "../../utility/axios.js";
 import classes from "./login.module.css";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 function Login({ onSwitch }) {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -49,6 +51,8 @@ function Login({ onSwitch }) {
           confirmButtonText: "OK"
         })
         setError(null);
+        navigate("/", { replace: true }); // Navigate to the base route
+        window.location.reload();
       } else {
         setError(response.data.msg || "Login failed.");
         await Swal.fire({

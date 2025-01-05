@@ -5,14 +5,18 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import { UserState } from "../../App.jsx";
+import { useNavigate } from "react-router-dom";
+
 
 function Header() {
-  const {user}=useContext(UserState);
+  const {user,setUser}=useContext(UserState);
   const userId = user?.userid;
+  const navigate = useNavigate();
 
   const handleSignOut = () => {
     localStorage.removeItem("EV-Forum-token-Jun-2024"); //remove the auth token
-    window.location.replace("/auth"); //redirect to auth page so that user can login again
+    setUser(null);
+    navigate("/auth", { replace: true }); //redirect to auth page so that user can login again
   };
 
 
@@ -21,7 +25,7 @@ function Header() {
     <>
       <Navbar bg="light " variant="light" expand="md" className="px-3" style={{position:"sticky", top:"0", zIndex:"3", backgroundColor:"white", borderBottom:"1px solid #dee2e6"}}>
         <Container className={classes.header_container}>
-          <Navbar.Brand href="/">
+          <Navbar.Brand as={Link} to={userId ? "/" : "/auth"}>
             <img
               src={EvangadiLogo}
               className="d-inline-block align-top"
